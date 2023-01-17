@@ -19,7 +19,7 @@ public class PromptGenerator
 
     public void ShowPrompts()
     {
-        Console.WriteLine($"{promptsList}")
+        Console.WriteLine($"{promptsList}");
     }
 
     

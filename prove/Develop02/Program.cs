@@ -28,12 +28,12 @@ class Program
             {
             Random randomPrompts = new Random();
             
-            journal.WriteEntry();
+            journal.addEntry();
 
             }
             else if (userOption == 2)
             {
-            entry.ShowEntry();
+            //entry.ShowEntry();
             }
             else if (userOption == 3)
             {
@@ -41,7 +41,9 @@ class Program
             }   
             else if (userOption == 4)
             {
-            journal.Savefile();
+            Console.Write("Add file name");
+            string addFileName = Console.ReadLine();
+            journal.Savefile(addFileName);
             journal.setFilename();
             }
 

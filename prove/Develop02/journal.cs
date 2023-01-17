@@ -14,11 +14,16 @@ public class Journal
     private string _userEntry;
 
     //class methods
-
+    List<string> entriesList = new List<string>();
     public void addEntry()
     {
+        //prints 
         Console.Write("Write your entry");
         string write = Console.ReadLine();
+        Entry newEntry = new Entry();
+        newEntry._Entry = _userEntry;
+
+
     }
     public void setFilename()
     {
@@ -53,7 +58,7 @@ public class Journal
             string lastName = parts[1];
         }
     }
-
+    //saves file using user input from main program 
      public void Savefile(string _input)
     {
         using (StreamWriter outFile = new StreamWriter(_filename))
