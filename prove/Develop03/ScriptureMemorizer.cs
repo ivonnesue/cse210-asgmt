@@ -2,33 +2,38 @@ using System;
 
 class ScriptureMemorizer
 {
+    //attributes
     private Scripture scripture;
 
-    private List<string> scritpureTextList;
+    private List<string> scriptureTextList;
     
+    //constructor
     public ScriptureMemorizer(Scripture _scripture)
     {
         scripture = _scripture;
-        scritpureTextList = new List<string>();
-        convertTexttoList();
+        scriptureTextList = new List<string>();
+        convertTextToList();
     }
-
-    private void convertTexttoList()
+    //splits scriptureTextList words and stores them in a list
+    private void convertTextToList()
     {
-        scritpureTextList = scritpureTextList.ToString().Split(' ').ToList();
+        scriptureTextList = scripture.toString().Split(' ').ToList();
     }
 
     public void removeWordsFromText()
     {
-        int numWordsToRemove = new Random().Next(3);
+        int numWordsToRemove = new Random().Next(2, 4);
         int wordsRemoved = 0;
 
         do 
         {
-            int randomIndex = new Random().Next(0, scritpureTextList.Count());
+            int randomIndex = new Random().Next(0, scriptureTextList.Count());
             
-            scritpureTextList[randomIndex] = new string('_', scritpureTextList[randomIndex].Length);
-            wordsRemoved++;
+            if (scriptureTextList[randomIndex].Contains('_') == false)
+            {
+                scriptureTextList[randomIndex] = new string('_', scriptureTextList[randomIndex].Length);
+                wordsRemoved++;
+            }
 
         }while (wordsRemoved != numWordsToRemove);
 
@@ -36,14 +41,14 @@ class ScriptureMemorizer
     
     public string toString()
     {
-        return string.Join(' ', scritpureTextList);
+        return string.Join(' ', scriptureTextList);
     }
 
     public bool hasWordsLeft()
     {
         bool retvalue = false;
         
-        foreach (string word in scritpureTextList)
+        foreach (string word in scriptureTextList)
         {
             if (word.Contains('_') == false)
             {
