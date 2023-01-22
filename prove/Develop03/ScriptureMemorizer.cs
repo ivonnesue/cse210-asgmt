@@ -6,7 +6,7 @@ class ScriptureMemorizer
 
     private List<string> scritpureTextList;
     
-    public ScritptureMemorizer(Scripture _scripture)
+    public ScriptureMemorizer(Scripture _scripture)
     {
         scripture = _scripture;
         scritpureTextList = new List<string>();

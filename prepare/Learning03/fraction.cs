@@ -45,9 +45,10 @@ public class Fraction
         return _bottom;
     }
 
-    public int setBottom(int fractionBottom)
+    public void setBottom(int fractionBottom)
     {
-        return _bottom;
+        _bottom = fractionBottom;
+
     }
     public string getFractionString()
     {
