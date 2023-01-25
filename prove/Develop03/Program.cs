@@ -13,14 +13,18 @@ class Program
 
         string userInput = "";
 
-        while (userInput != "quit" && scriptureMemorizer.hasWordsLeft() == true)
+        while (userInput != "quit")
         {
             Console.Clear();
             Console.WriteLine(string.Format("{0} {1}", scriptureReference.toString(), scriptureMemorizer.toString())); 
             Console.WriteLine();
-            Console.ReadLine();
-            scriptureMemorizer.removeWordsFromText();
-        }
+            Console.WriteLine("type quit if you want to exit");
+            userInput = Console.ReadLine();
+            if (scriptureMemorizer.hasWordsLeft() == true)
+                {
+                    scriptureMemorizer.removeWordsFromText();
+                }
 
+        }
     }
 }
