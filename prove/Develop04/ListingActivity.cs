@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 public class ListingActivity : Activity
 {
-    private List<string> listingPromptList;
+    private List<string> listingPromptList, answerList;
 
     public ListingActivity() : base()
     {
@@ -21,6 +21,7 @@ public class ListingActivity : Activity
             "- Who are some of your personal heroes?"
         };
 
+        answerList = new List<string>();
         
     }
 
@@ -31,6 +32,7 @@ public class ListingActivity : Activity
         return listingPromptList[index];
     }
 
+    
     public void showListingRandomPrommpt()
           
     {
@@ -41,33 +43,29 @@ public class ListingActivity : Activity
 
         DisplayCountdown(5);
         Console.WriteLine();
+
         string userAnswer = "";
         
+        var totalCount = 0;
+
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
         while(stopwatch.ElapsedMilliseconds / 1000 < getUserInputTime())
         {
            Console.Write("> ");
-           userAnswer = Console.ReadLine();
-        
+           userAnswer = Console.ReadLine(); 
         }
 
-        //the following code did not work:
-        List<string> Answerslist = new List<string>();
-        userAnswer.Add()
-        //string userAnswer = "";
+        answerList.Add(userAnswer);
 
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    Console.Write("> ");
-        //    userAnswer = Console.ReadLine();
-        //}
-        //
-        //foreach (int index in Answerindexes)
-        //{
-        //    
-        //}
-        //   
+        totalCount = answerList.Count();
+
+        totalCount++;
+        
+        Console.WriteLine();
+        //Display count
+        Console.WriteLine($" you listed {totalCount} items");
+
     }
     public void runListingActivity()
     {
