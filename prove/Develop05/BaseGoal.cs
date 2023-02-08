@@ -1,47 +1,87 @@
 using System;
 
-public class BaseGoal
+public abstract class BaseGoal
 {
-    private string goalName, Goaldescription;
-    private int points;
+    
+    private string _goalName, _goalDescription;
+    int _points, _goalType;
 
-    public BaseGoal(string _goalName, string _Goaldescription, int points)
+    public BaseGoal()
     {
-        goalName = _goalName;
-        Goaldescription = _Goaldescription;
-        points = 0;
     }
 
-    public void setGoalName(string _goalName)
-    {
-        goalName = _goalName;
-    }
-
-    public void setDescription(string _Goaldescription)
-    {
-        Goaldescription = _Goaldescription;
-    }
-
-    public void RecordEvent()
-    {
+    public BaseGoal(string goalName, string goalDescription, int goalType)
+    { 
+        _goalName = goalName;
+        _goalDescription = goalDescription;
+        _goalType = goalType = 0;
 
     }
 
-    public void calculateScore()
+ 
+    public void setPoints(int points)
     {
-        
+        _points = points;
     }
 
-    public void runProgram()
+    public int getPoints()
     {
-        
+        return _points;
     }
 
-    //public virtual string toCSVRecord(string fileName)
-    //{
+    
+    public void setGoalName(string goalName)
+    {
+        _goalName = goalName;
+    }
 
-    //}
+    public string getGoalName()
+    {
+        return _goalName;
+    }
+    public void setDescription(string goalDescription)
+    {
+        _goalDescription = goalDescription;
+    }
+    
+    public string getDescription()
+    {
+        return _goalDescription;
+    }
+    public void askforGoalName()
+    {
+        Console.WriteLine("What is the name of your goal? ");
+        setGoalName(Console.ReadLine()); 
+    }   
+    public void askForDescription()
+    {
+        Console.Write("Add a short description about your goal ");
+        setDescription(Console.ReadLine());
+    
+    }
 
+    public int askForPoints(int _points)
+    {
+        Console.WriteLine("How many points is this goal worth?")
+        _points = int.Parse(Console.ReadLine());
 
+        return _points;
+    }
+    public void DisplayPoints()
+    {
+        Console.WriteLine(getPoints());
+    }
+
+    public abstract void RecordEvent();
+
+    public abstract string ToCSVRecord();
+   
+    public void runGoalProgram()
+    {
+        askforGoalName();
+        askForDescription();
+     
+    }
 
 }
+

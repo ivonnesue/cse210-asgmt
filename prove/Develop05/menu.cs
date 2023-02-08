@@ -37,7 +37,7 @@ class Menu
     
     public void DisplayPoints(int _totalPoints)
     {
-        Console.WriteLine(string.Format("You jave {0 points. \n}", _totalPoints));
+        Console.WriteLine(string.Format("You have {0 points. \n}", _totalPoints));
     }
 
     public int DisplayGetMainMenu()
