@@ -103,7 +103,7 @@ class AllGoals
         allGoals[recordEvent].RecordEvent();
         totalPoints += allGoals[recordEvent].getGoalPoints();
 
-        Console.WriteLine(string.Format("You now have {0} points", totalPoints.ToString());
+        Console.WriteLine(string.Format("You now have {0} points", totalPoints.ToString()));
 
     }
 

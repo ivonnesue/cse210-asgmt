@@ -7,7 +7,10 @@ public class SimpleGoal : BaseGoal
 
     private bool goalComplete;
 
+    public SimpleGoal() : base()
+    {
 
+    }
     public SimpleGoal(string _goalName, string _goalDescription, int _points, bool _goalComplete)
     : base(_goalName, _goalDescription, _points)
     {

@@ -20,12 +20,11 @@ public class Checklist : BaseGoal
     public int CalculateBonusPoints()
     {
         if (goalComplete == true);
-            {
-                askForPoints();
-                int addBonus = 0;
-                addBonus += _points;
-            }
-        else
+        {
+            askForPoints();
+            int addBonus = 0;
+            addBonus += _points;
+        }       
 
     }
     public override void ToCSVRecord()

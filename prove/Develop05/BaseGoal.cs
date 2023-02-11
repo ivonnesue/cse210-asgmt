@@ -62,7 +62,7 @@ public abstract class BaseGoal
 
     public int askForPoints(int _points)
     {
-        Console.WriteLine("How many points is this goal worth?")
+        Console.WriteLine("How many points is this goal worth?");
         _points = int.Parse(Console.ReadLine());
 
         return _points;
