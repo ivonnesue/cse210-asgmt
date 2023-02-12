@@ -5,9 +5,7 @@ public class Checklist : BaseGoal
 {   
     private const int goalType = 3;
 
-    private int BonusPointsAmount;
-
-    private int GoalFrequency;
+    //private int GoalFrequency;
     private bool goalComplete;
 
 
@@ -17,15 +15,20 @@ public class Checklist : BaseGoal
         goalComplete = _goalComplete;
     }
 
-    public int CalculateBonusPoints()
-    {
-        if (goalComplete == true);
-        {
-            askForPoints();
-            int addBonus = 0;
-            addBonus += _points;
-        }       
+    //public int CalculateBonusPoints()
+    //{
+    //    if (goalComplete == true);
+    //    {
+    //        askForPoints();
+    //        int addBonus = 0;
+    //        addBonus += _points;
+    //    }       
 
+    //}
+
+    public int getGoalFrequency()
+    {
+        return GoalFrequency;
     }
     public override void ToCSVRecord()
     {
@@ -44,5 +47,9 @@ public class Checklist : BaseGoal
         goalComplete = true;
     }
 
+    public bool getGoalComplete()
+    {
+        return goalComplete;
+    }
 
 }

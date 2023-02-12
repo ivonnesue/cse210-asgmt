@@ -102,7 +102,14 @@ class AllGoals
         int recordEvent = int.Parse(Console.ReadLine()) -1;
         allGoals[recordEvent].RecordEvent();
         totalPoints += allGoals[recordEvent].getGoalPoints();
-
+        if (allGoals[recordEvent].GetType() == typeof(Checklist))
+        {
+            Checklist goal = (Checklist) allGoals[recordEvent];
+            if (goal.getGoalComplete() == true)
+            {
+                totalPoints += allGoals[recordEvent].getBonusPoints();
+            }
+        }
         Console.WriteLine(string.Format("You now have {0} points", totalPoints.ToString()));
 
     }

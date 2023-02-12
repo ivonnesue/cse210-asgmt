@@ -25,9 +25,27 @@ class Program
                     {
                         case 1: 
                         goal = new SimpleGoal();
-                        goal.DisplayGoalName();
-                        goal.DisplalygetGoalDescription();
-                        goal.DisplaygetGoalPoints();
+                        goal.askforGoalName();
+                        goal.askForDescription();
+                        goal.askForPoints();
+                        break;
+                
+                        case 2: 
+                        goal = new EternalGoal();
+                        goal.askforGoalName();
+                        goal.askForDescription();
+                        goal.askForPoints();
+                        break;
+
+                        case 3: 
+                        goal = new Checklist();
+                        goal.askforGoalName();
+                        goal.askForDescription();
+                        goal.askForPoints();
+                        goal.DisplayGetFrequencyAmount();
+                        goal.DisplayGetBonusPoints();
+                        break;
+                
                     }
                     if (goal != null)
                     {
@@ -41,12 +59,15 @@ class Program
                     break;
                 case 3:
                     allGoals.saveGoals();
-                    break;;
+                    break;
                 case 4:
                     allGoals.LoadGoals();
                     break;
+                case 5:
+                    allGoals.DisplayGoalRecordEvent();
+                    break;
             }
 
-    
+        }
     }
 }

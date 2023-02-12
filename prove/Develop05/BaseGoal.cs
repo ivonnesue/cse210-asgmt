@@ -4,7 +4,7 @@ public abstract class BaseGoal
 {
     
     private string _goalName, _goalDescription;
-    int _points, _goalType;
+    protected int _points, _goalType, BonusPoints, GoalFrequency;
 
     public BaseGoal()
     {
@@ -29,7 +29,15 @@ public abstract class BaseGoal
         return _points;
     }
 
+    public int getBonusPoints()
+    {
+        return BonusPoints;
+    }
     
+    public void setBonusPoints(int _bonusPoints)
+    {
+        BonusPoints = _bonusPoints;
+    }
     public void setGoalName(string goalName)
     {
         _goalName = goalName;
@@ -72,6 +80,19 @@ public abstract class BaseGoal
         Console.WriteLine(getPoints());
     }
 
+    public void DisplayGetFrequencyAmount()
+    {
+        Console.WriteLine("How many times does this goal need to be accomplished" +
+        "to get a bonus?");
+        GoalFrequency = int.Parse(Console.ReadLine());
+    
+    }
+
+    public void DisplayGetBonusPoints()
+    {
+        Console.WriteLine("What is the bonus for accomplishing it that many time?");
+        bonusPoints = int.Parse(Console.ReadLine());
+    }
     public abstract void RecordEvent();
 
     public abstract string ToCSVRecord();
