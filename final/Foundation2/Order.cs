@@ -10,16 +10,10 @@ public class Order
 
     public List<Product> ProductList = new List<Product>();
     public List <double> ProductPriceList = new List<double>();
-    //private Product product = new Product("", "", "", 0);
+    
     
     Customer customer;
-    
-    //constructor
-    //public Order()
-    //{
-    //    OrderCost = 0;
-    //    shippingCost = 0;
-    //}
+
     public void setCustomer(Customer _customer)
     {
         customer = _customer;
