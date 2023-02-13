@@ -11,8 +11,8 @@ public class Order
     public List<Product> ProductList = new List<Product>();
     public List <double> ProductPriceList = new List<double>();
     //private Product product = new Product("", "", "", 0);
-    private Address address = new Address();
-    Customer customer = new Customer("");
+    
+    Customer customer;
     
     //constructor
     //public Order()
@@ -20,17 +20,20 @@ public class Order
     //    OrderCost = 0;
     //    shippingCost = 0;
     //}
-
+    public void setCustomer(Customer _customer)
+    {
+        customer = _customer;
+    }
     public void DisplayProductList()
     {
        foreach(Product product in ProductList)
        {
-            Console.WriteLine(product);
+            Console.WriteLine(product.FormatProduct());
        }
     }
     public void getShippingCost()
     {
-        bool USshipping = address.IsAddressInUSA();
+        bool USshipping = customer.CXlivesInUSA();
         if (USshipping == true)
         {
             shippingCost = 5;
@@ -58,7 +61,7 @@ public class Order
     }
     public void DisplayShippingLabel()
     {
-        shippingLabel = String.Format("{0} \n{1}", customer.getCustomerName(), address.FormatAddress());
+        shippingLabel = String.Format("{0} \n{1}", customer.getCustomerName(), customer.getCustomerAddress());
         Console.WriteLine("Ship To: ");
         Console.WriteLine(shippingLabel);
        
@@ -71,10 +74,11 @@ public class Order
         {
             OrderCost += price;
         }
+        getShippingCost();
         OrderCost += shippingCost;
-        return OrderCost;
+        return Math.Round(OrderCost, 2);
     }
-    public string DisplayOrderCost()
+    public string getOrderCost()
     {
         return string.Format("${0}", OrderCost);
     }

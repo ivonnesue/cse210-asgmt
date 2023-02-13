@@ -12,14 +12,24 @@ public class Customer
     {
         CustomerName = _customerName;
     }
+
+    public void setCustomerAddress(Address _address)
+    {
+        address = _address;
+    }
     public string getCustomerName()
     {
         return CustomerName;
     }
 
-    public void CXlivesInUSA()
+    public bool CXlivesInUSA()
     {
        LivesInUSA = address.IsAddressInUSA();
+       return LivesInUSA;
     }
 
+    public string getCustomerAddress()
+    {
+        return address.FormatAddress();
+    }
 }

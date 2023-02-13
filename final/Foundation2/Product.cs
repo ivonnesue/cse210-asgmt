@@ -21,7 +21,6 @@ public class Product
 
     }
     
-    
     public string FormatProduct()
     {
         return String.Format("Product: {0}, {1}, {2}", ProductName, ProductID, productPrice);
