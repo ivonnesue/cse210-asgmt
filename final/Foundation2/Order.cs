@@ -11,7 +11,6 @@ public class Order
     public List<Product> ProductList = new List<Product>();
     public List <double> ProductPriceList = new List<double>();
     
-    
     Customer customer;
 
     public void setCustomer(Customer _customer)
