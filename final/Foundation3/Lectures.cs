@@ -12,10 +12,6 @@ public class Lectures : Event
     
     }
 
-    //public void setAdditionalInfo(string _additionalInfo)
-    //{
-    //    additionalInfo = _additionalInfo;
-    //}
 
     public string DefineAdditionalInfo()
     {
