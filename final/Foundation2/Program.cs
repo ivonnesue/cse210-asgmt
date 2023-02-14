@@ -7,7 +7,7 @@ class Program
         Console.WriteLine("Hello Foundation2 World!");
         
         //Order 1
-        Console.WriteLine("Order1");
+        Console.WriteLine("Order #1");
         Order order1 = new Order();
         
         Customer customer1 = new Customer("Jane Doe");
@@ -33,7 +33,7 @@ class Program
         Console.WriteLine();
 
         order1.CalculateOrderCost();
-        Console.WriteLine(order1.getOrderCost());
+        Console.WriteLine($"Total Order cost: {order1.getOrderCost()}");
         Console.WriteLine();
 
         order1.DisplayShippingLabel();      
@@ -69,7 +69,7 @@ class Program
         Console.WriteLine();
 
         order2.CalculateOrderCost();
-        Console.WriteLine(order2.getOrderCost());
+        Console.WriteLine($"Total order cost: {order2.getOrderCost()}");
         Console.WriteLine();
 
         order2.DisplayShippingLabel();       

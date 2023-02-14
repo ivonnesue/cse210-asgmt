@@ -2,7 +2,7 @@ using System;
 
 public class Order
 {
-    private double OrderCost = 0;
+    private double orderCost = 0;
     private string shippingLabel;
 
     private double shippingCost = 0;
@@ -65,15 +65,16 @@ public class Order
         //sums up product prices 
         foreach (double price in ProductPriceList)
         {
-            OrderCost += price;
+            orderCost += price;
         }
         getShippingCost();
-        OrderCost += shippingCost;
-        return Math.Round(OrderCost, 2);
+        orderCost += shippingCost;
+        orderCost = Math.Round(orderCost, 2);
+        return orderCost;
     }
     public string getOrderCost()
     {
-        return string.Format("${0}", OrderCost);
+        return string.Format("${0}", orderCost);
     }
 
     
