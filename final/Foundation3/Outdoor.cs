@@ -7,11 +7,12 @@ public class OutdoorEvent : Event
     public OutdoorEvent(string _weather) : base()
     {
         weather = _weather;
+    
     }
 
     public string DefineAdditionalInfo()
     {
-        getAdditionInfo();
+        
         additionalInfo = String.Format("weather: {0}", weather);
         return additionalInfo;
     }

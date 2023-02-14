@@ -37,7 +37,10 @@ public class Event
         address = _address;
     }
 
-    
+    public void setEventType(string _eventType)
+    {
+        eventType = _eventType;
+    }
     public string FormatStandardMessage()
     {
         standardMessage = String.Format("{0} \n{1} \n{2}, {3} \n{4}", eventTitle, description, date, time, address);
@@ -55,7 +58,9 @@ public class Event
     }
     public string FormatFullDetails()
     {
-        fullDetails = String.Format("{0} \n{1} \n{2}, {3}, \n {4} \n{5}", eventTitle, description, date, time, getAdditionInfo(), address);
+        //Lectures lecture = new Lectures("", 0);
+        
+        fullDetails = String.Format("{0} \n{1} \n{2}, {3}, \n {4} \n{5}", eventTitle, description, date, time, additionalInfo, address);
         return fullDetails;
     }
 
