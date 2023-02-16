@@ -10,6 +10,8 @@ class Program
         Console.WriteLine();
     
         Video video1 = new Video("Video 1", "John Doe", 60);
+
+        video1.Title = "Video1";
        
         Comments comment1 = new Comments("user001", "Fantastic");
         Comments comment2 = new Comments("user002 ", "Awesome");
@@ -17,6 +19,7 @@ class Program
         video1.CommentsList.Add(comment1);
         video1.CommentsList.Add(comment2);
         video1.CommentsList.Add(comment3);
+
         
         //video1.DisplayVideoInfo();
         //video1.DisplayCommentList();
