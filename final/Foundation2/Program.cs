@@ -55,7 +55,7 @@ class Program
            orderNumber ++;
            Console.WriteLine($"Order # {orderNumber}");
         
-            order.DisplayProductList();
+            order.DisplayPackingLabel();
             order.CalculateOrderCost();
             Console.WriteLine();
 

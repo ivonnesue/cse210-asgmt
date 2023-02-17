@@ -7,6 +7,7 @@ public class Order
 
     private double shippingCost = 0;
    
+    private string packingLabel;
 
     public List<Product> ProductList = new List<Product>();
     //public List <double> ProductPriceList = new List<double>();
@@ -17,13 +18,7 @@ public class Order
     {
         customer = _customer;
     }
-    public void DisplayProductList()
-    {
-       foreach(Product product in ProductList)
-       {
-            Console.WriteLine(product.FormatProduct());
-       }
-    }
+  
     public void getShippingCost()
     {
         bool USshipping = customer.CXlivesInUSA();
@@ -38,16 +33,21 @@ public class Order
 
     }
 
-    /*public void setPackingLabel(string _packingLabel)
+    public void setPackingLabel(string _packingLabel)
     {
         packingLabel = _packingLabel;
     }
 
-    public string getPackingLabel()
-    {
-        return packingLabel;
-    }*/
 
+
+    public void DisplayPackingLabel()
+    {
+       foreach(Product product in ProductList)
+       {
+            packingLabel = product.FormatProduct();
+            Console.WriteLine(packingLabel);
+       }
+    }
     public void setShippingLabel(string _shippingLabel)
     {
         shippingLabel = _shippingLabel;

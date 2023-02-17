@@ -23,7 +23,7 @@ public class Product
     
     public string FormatProduct()
     {
-        return String.Format("Product: {0}, {1}, {2}, {3}", ProductName, ProductID, productPrice, quantity);
+        return String.Format("Product: {0}, ID: {1}, Price: ${2}, QTY: {3}", ProductName, ProductID, productPrice, quantity);
     }
     public double CalculateProductPrice()
 
