@@ -23,7 +23,7 @@ class Program
             SummaryList.Add(running1);
             SummaryList.Add(swimming1);
             SummaryList.Add(cycling1);
-            //SummaryList.Add(activityType);
+         
     
 
         foreach (Activity activity in SummaryList)
