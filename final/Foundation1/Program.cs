@@ -10,37 +10,34 @@ class Program
         Console.WriteLine();
     
         Video video1 = new Video("Video 1", "John Doe", 60);
-
-        video1.Title = "Video1";
        
-        Comments comment1 = new Comments("user001", "Fantastic");
+        /*Comments comment1 = new Comments("user001", "Fantastic");
         Comments comment2 = new Comments("user002 ", "Awesome");
         Comments comment3 = new Comments("user003", "I really like it");
         video1.CommentsList.Add(comment1);
         video1.CommentsList.Add(comment2);
-        video1.CommentsList.Add(comment3);
+        video1.CommentsList.Add(comment3);*/
 
         //video1.CommentsList.AddRange();
 
+        video1.CommentsList.Add(new Comments("user001", "Fantastic"));
+        video1.CommentsList.Add(new Comments("user002", "Awesome"));
+        video1.CommentsList.Add(new Comments("user001", "I really like it!"));
+
         Video video2 = new Video("Video 2", "Jane Doe", 30);
         
-        Comments Comment1V2 = new Comments("user 001", "Awesome");
-        Comments Comment2V2 = new Comments("user002", "Interesting");
-        Comments Comment3V2 = new Comments("user 003", "That's funny!" );
-        video2.CommentsList.Add(Comment1V2);
-        video2.CommentsList.Add(Comment2V2);
-        video2.CommentsList.Add(Comment3V2);
-     
+        video2.CommentsList.Add(new Comments("user 001", "Awesome"));
+        video2.CommentsList.Add(new Comments("user002", "Interesting"));
+        video2.CommentsList.Add(new Comments("user 003", "That's funny!"));
+        
+      
 
         Video video3 = new Video("Video 3", "Juan Gonzalez", 120);
-        
-        Comments Comment1V3 = new Comments("user 001", "Wow!");
-        Comments Comment2V3 = new Comments("user002", "No Way!");
-        Comments Comment3V3 = new Comments("user 003", "How did you do that?" );
-        video3.CommentsList.Add(Comment1V3);
-        video3.CommentsList.Add(Comment2V3);
-        video3.CommentsList.Add(Comment3V3);
-        
+
+        video3.CommentsList.Add(new Comments("user 001", "Wow!"));
+        video3.CommentsList.Add(new Comments("user002", "No Way!"));
+        video3.CommentsList.Add(new Comments("user 003", "How did you do that?"));
+
 
         List<Video> VideosList = new List<Video>();
         VideosList.Add(video1);
