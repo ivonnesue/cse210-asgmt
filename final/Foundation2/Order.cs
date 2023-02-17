@@ -9,7 +9,7 @@ public class Order
     private string packingLabel;
 
     public List<Product> ProductList = new List<Product>();
-    public List <double> ProductPriceList = new List<double>();
+    //public List <double> ProductPriceList = new List<double>();
     
     Customer customer;
 
@@ -38,7 +38,7 @@ public class Order
 
     }
 
-    public void setPackingLabel(string _packingLabel)
+    /*public void setPackingLabel(string _packingLabel)
     {
         packingLabel = _packingLabel;
     }
@@ -46,7 +46,7 @@ public class Order
     public string getPackingLabel()
     {
         return packingLabel;
-    }
+    }*/
 
     public void setShippingLabel(string _shippingLabel)
     {
@@ -63,9 +63,9 @@ public class Order
     public double CalculateOrderCost()
     {
         //sums up product prices 
-        foreach (double price in ProductPriceList)
+        foreach (Product product in ProductList)
         {
-            orderCost += price;
+            orderCost += product.CalculateProductPrice();
         }
         getShippingCost();
         orderCost += shippingCost;
