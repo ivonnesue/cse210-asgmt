@@ -26,7 +26,7 @@ class Program
         }
         /// iterate through the list
         Console.WriteLine("Your list is:");
-        for (int i = 0; i < numbers.Count; i++)
+        for (int i = 0; i < numbers.Count(); i++)
         {
             Console.WriteLine(numbers[i]);
         }

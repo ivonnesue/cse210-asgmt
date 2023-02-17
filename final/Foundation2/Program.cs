@@ -7,7 +7,7 @@ class Program
         Console.WriteLine("Hello Foundation2 World!");
         
         //Order 1
-        Console.WriteLine("Order #1");
+       
         List<Order> orderList = new List<Order>
         {
             new Order(),
@@ -50,6 +50,11 @@ class Program
         
         foreach (Order order in orderList)
         {
+           
+           int orderNumber = orderList.IndexOf(order);
+           orderNumber ++;
+           Console.WriteLine($"Order # {orderNumber}");
+        
             order.DisplayProductList();
             order.CalculateOrderCost();
             Console.WriteLine();
