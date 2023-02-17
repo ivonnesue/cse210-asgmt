@@ -21,9 +21,6 @@ class Program
         video1.CommentsList.Add(comment3);
 
         
-        //video1.DisplayVideoInfo();
-        //video1.DisplayCommentList();
-        
 
         Video video2 = new Video("Video 2", "Jane Doe", 30);
         
@@ -33,7 +30,7 @@ class Program
         video2.CommentsList.Add(Comment1V2);
         video2.CommentsList.Add(Comment2V2);
         video2.CommentsList.Add(Comment3V2);
-        //video2.DisplayVideoInfo();
+     
 
         Video video3 = new Video("Video 3", "Juan Gonzalez", 120);
         
@@ -43,7 +40,7 @@ class Program
         video3.CommentsList.Add(Comment1V3);
         video3.CommentsList.Add(Comment2V3);
         video3.CommentsList.Add(Comment3V3);
-        //video3.DisplayVideoInfo();
+        
 
         List<Video> VideosList = new List<Video>();
         VideosList.Add(video1);
