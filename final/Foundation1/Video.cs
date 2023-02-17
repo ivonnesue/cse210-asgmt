@@ -22,7 +22,12 @@ public class Video
     
     public void DisplayCommentList()
     {
-        Console.WriteLine(CommentsList );
+        foreach (Comments comment in CommentsList)
+        {
+             Console.WriteLine(comment.FormatCommentInfo());
+        }
+        //Console.WriteLine(CommentsList);
+       
     }
 
 
