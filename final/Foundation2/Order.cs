@@ -6,7 +6,7 @@ public class Order
     private string shippingLabel;
 
     private double shippingCost = 0;
-    private string packingLabel;
+   
 
     public List<Product> ProductList = new List<Product>();
     //public List <double> ProductPriceList = new List<double>();

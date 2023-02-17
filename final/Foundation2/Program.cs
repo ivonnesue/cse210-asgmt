@@ -32,7 +32,7 @@ class Program
 
 
         //Order2
-        //Order order2 = new Order();
+        
         Customer customer2 = new Customer("Joe Parker");
         orderList[1].setCustomer(customer2);
         
@@ -58,7 +58,7 @@ class Program
             Console.WriteLine();
             order.DisplayShippingLabel();  
             Console.WriteLine("--------------------------------");
-             Console.WriteLine();
+            Console.WriteLine();
         }
 
     }
