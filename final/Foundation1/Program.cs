@@ -20,7 +20,7 @@ class Program
         video1.CommentsList.Add(comment2);
         video1.CommentsList.Add(comment3);
 
-        
+        //video1.CommentsList.AddRange();
 
         Video video2 = new Video("Video 2", "Jane Doe", 30);
         
