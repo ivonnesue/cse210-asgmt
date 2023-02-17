@@ -18,10 +18,6 @@ public class Comments
     
     }
 
-    //public void AddToList()
-    //{
-    //   Video CommentsList.Add(Comment);
-    //}
 
 
 }
