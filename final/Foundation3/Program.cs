@@ -47,8 +47,7 @@ class Program
         //Event3
         Console.WriteLine("-----------------------------------");
 
-        OutdoorEvent outdoor = new OutdoorEvent("65 F - 75 F, Partly Cloudy, 0% chances of Rain"/*, 
-        "Outdoor"*/);
+        OutdoorEvent outdoor = new OutdoorEvent("65 F - 75 F, Partly Cloudy, 0% chances of Rain");
 
         outdoor.DefineAdditionalInfo();
         outdoor.setAdditionInfo(outdoor.DefineAdditionalInfo());

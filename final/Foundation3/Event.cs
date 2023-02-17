@@ -58,7 +58,7 @@ public class Event
     }
     public string FormatFullDetails()
     {
-        //Lectures lecture = new Lectures("", 0);
+        
         
         fullDetails = String.Format("{0} \n{1} \n{2}, {3}, \n {4} \n{5}", eventTitle, description, date, time, additionalInfo, address);
         return fullDetails;

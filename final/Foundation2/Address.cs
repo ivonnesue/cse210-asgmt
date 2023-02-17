@@ -5,7 +5,7 @@ public class Address
 {
     private string street, city, stateOrProvince, country;
 
-    //private bool isUSA;
+   
     public Address()
     {
 
