@@ -8,11 +8,11 @@ class Program
         Console.WriteLine();
 
         Running running1 = new Running(10, 40);
-        //Console.WriteLine(running1.GetSummary());
+        
 
         
         Swimming swimming1 = new Swimming(8, 30);
-        //Console.WriteLine(swimming1.GetSummary());
+        
 
         Cycling cycling1 = new Cycling(0.215, 2000.0, 60);
 
