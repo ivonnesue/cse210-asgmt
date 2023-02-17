@@ -85,8 +85,7 @@ public class Activity
     
     public string GetSummary()
     {
-        //return String.Format("{0}, {1} {2} ({3} min) - Distance {4} km," +
-        //" Speed {5} kph, Pace{6} min per km", date, activityType, timeInMins, distance, speed, pace);
+        
         return ($"Date: {getDate()}, Activity: {activityType}, {getTime()} minutes, distance: {CalculateDistanceKM()} Km, speed: {CalculateSpeedKPH()} kph" +
         $" pace: {calculatePace()} min per km");
     }

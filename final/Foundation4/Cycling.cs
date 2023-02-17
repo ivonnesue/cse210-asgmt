@@ -55,6 +55,6 @@ public class Cycling : Activity
         return base.calculatePace();
     }
 
-    //distance = circumference * NumOfRevolutions / 1000
+  
 
 }
