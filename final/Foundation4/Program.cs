@@ -14,12 +14,15 @@ class Program
         Swimming swimming1 = new Swimming(8, 30);
         //Console.WriteLine(swimming1.GetSummary());
 
+        Cycling cycling1 = new Cycling(0.215, 2000.0, 60);
+
         List<Activity>SummaryList = new List<Activity>();
         //add to list
         
     
             SummaryList.Add(running1);
             SummaryList.Add(swimming1);
+            SummaryList.Add(cycling1);
             //SummaryList.Add(activityType);
     
 

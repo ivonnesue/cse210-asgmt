@@ -29,7 +29,7 @@ public class Video
     //sets text format for displayed info
     public string DisplayVideoInfo()
     {
-        return String.Format("{0}, {1}, {2}, {3}", Title, Author, length, CountComments());
+        return String.Format("Title: {0}, Author: {1}, Length: {2}, Comments: {3}", Title, Author, length, CountComments());
     
     }
     

@@ -29,7 +29,6 @@ public class Running : Activity
     public override double CalculateSpeedKPH()
     {
        
-        
         //sets speed attribute value by calculating
         //the value of distance divided by the value of Time * 60
         base.setSpeed(CalculateDistanceKM() / getTime() * 60);
