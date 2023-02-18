@@ -15,7 +15,6 @@ class Program
             new Video("Video 3", "Juan Gonzalez", 120)
         };
 
-
         List<Comments>newList = new List<Comments>
         {
             new Comments("user001", "Fantastic"),
