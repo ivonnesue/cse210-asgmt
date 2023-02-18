@@ -38,8 +38,6 @@ public class Order
         packingLabel = _packingLabel;
     }
 
-
-
     public void DisplayPackingLabel()
     {
        foreach(Product product in ProductList)
