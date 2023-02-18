@@ -3,11 +3,11 @@ using System;
 public class Order
 {
     private double orderCost = 0;
-    private string shippingLabel;
+    private string shippingLabel, packinglabel;
 
     private double shippingCost = 0;
    
-    private string packingLabel;
+    
 
     public List<Product> ProductList = new List<Product>();
     //public List <double> ProductPriceList = new List<double>();
