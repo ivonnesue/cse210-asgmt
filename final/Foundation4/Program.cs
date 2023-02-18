@@ -9,11 +9,8 @@ class Program
 
         Running running1 = new Running(10, 40);
         
-
+        Swimming swimming1 = new Swimming(15, 30);
         
-        Swimming swimming1 = new Swimming(8, 30);
-        
-
         Cycling cycling1 = new Cycling(0.215, 2000.0, 60);
 
         List<Activity>SummaryList = new List<Activity>();
