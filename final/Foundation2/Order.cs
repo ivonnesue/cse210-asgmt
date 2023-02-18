@@ -3,7 +3,7 @@ using System;
 public class Order
 {
     private double orderCost = 0;
-    private string shippingLabel, packinglabel;
+    private string shippingLabel, packingLabel;
 
     private double shippingCost = 0;
    
